@@ -1,0 +1,116 @@
+.team{
+    .team__content{
+        background-color: $color-gray-8;
+        padding-top: $pd-4;
+        .team__title{
+            h3{
+                @include styleText($color-black-0,$fs-6, $fw-normal);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            p{
+                margin: $mg-2 auto 0;
+                width: 40%;
+                @include styleText($color-gray-1, $fs-0, $fw-normal);
+                line-height: 25px;
+            }
+        }
+        .team__details{
+            padding: $pd-4 0 ;
+                .card{
+                    img{
+                        width: 100%;
+                    }
+                    position: relative;
+                    .card-body{
+                        position: absolute;
+                        right: 0;
+                        bottom: 30px;
+                        width: 70%;
+                        background-color: rgba(0,0,0,0.7);
+                        text-align: right;
+                        padding: $pd-0 - 2 $pd-0 + 8;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        .card-title{
+                            @include styleText($color-white-0, $fs-0, $fw-normal);
+                        }
+                        .card-text{
+                            @include styleText(rgba(255, 255, 255, .5), $fs-0 - 3, $fw-normal);
+                        }  
+                    }
+                }
+                .team__hover{
+                    opacity: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    border: 20px solid rgba(0, 0, 0, .1);
+                    background-color: rgba(255, 255, 255, .9);
+                    .hover__details{
+                        .hover__text{
+                            -webkit-transform: translateY(-150px);
+                                    transform: translateY(-150px);
+                            h3{
+                                @include styleText($color-black-0, $fs-0 - 1, $fw-bold-0);
+                                text-transform: uppercase;
+                                padding-top: $pd-3;
+                                letter-spacing: 4px;
+                                margin-bottom: $mg-2;
+                            }
+                            p{  display: block;
+                                @include styleText($color-black-2, $fs-0 - 1, $fw-normal);
+                                padding: 0 $pd-1 + 6;
+                                line-height: 30px;
+                            }
+                        }
+                        .hover__icon{
+                            -webkit-transform: translateY(50px);
+                                    transform: translateY(50px);
+                            display: block;
+                            width: 100%;
+                            text-align: center;
+                            position: absolute;
+                            bottom: 30px;
+                            a{
+                                margin: 0 $mg-1 - 5;
+                                @include styleText($color-black-2, $fs-0, $fw-normal);
+                                &:hover{
+                                    color: $color-yellow;
+                                    -webkit-transition: all .5s;
+                                    transition: all .5s;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        opacity: 1;
+                        -webkit-transition: all .5s;
+                        transition: all .5s;
+                        .hover__text{
+                            -webkit-transform: translateY(0);
+                                    transform: translateY(0);
+                            -webkit-transition: all .5s;
+                            transition: all .5s;
+                        }
+                        .hover__icon{
+                            -webkit-transform: translateY(0);
+                                    transform: translateY(0);
+                            -webkit-transition: all .5s;
+                            transition: all .5s;
+                    }
+                }
+                @include responsive('large'){
+                    &:hover{
+                        .hover__text{
+                            -webkit-transform: translateY(150px);
+                                    transform: translateY(150px);
+                        }
+                    }
+                }
+            }  
+        }
+    }  
+}

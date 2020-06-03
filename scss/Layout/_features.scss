@@ -1,0 +1,72 @@
+.features{
+    .feature__title{
+        padding: $pd-4 0;
+        h3{
+            @include styleText($color-black-0, $fs-6, $fw-normal);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0;
+        }
+        p{
+            margin: 0 auto;
+            @include styleText($color-gray-1,$fs-0, $fw-normal);
+            width: 45%;
+            line-height: 30px;
+            padding-top: $pd-2;
+        }
+    }
+    .feature__content{
+        padding-bottom: $pd-4;
+        .feature__left{
+            padding: 0 $pd-2;
+            img{
+                width: 100%;
+            }
+        }
+        .feature__right{
+            padding: 0 $pd-2;
+            .content{
+                margin-bottom: $mg-3;
+                .number{
+                    @include styleText($color-gray-3,$fs-7 + 1, $fw-normal);
+                }
+                .title{
+                    @include styleText($color-black-0, $fs-5,$fw-normal);
+                    text-transform: uppercase;
+                    margin-bottom: $mg-2 - 10;
+                }
+                .text{
+                    @include styleText($color-gray-1,$fs-0,$fw-normal);
+                }
+            }
+            .button{
+                font-size: $fs-0 - 1;
+                
+                .left{
+                    @include styleButton($color-white-0,$color-black-2,transparent);
+                    padding: $pd-1 $pd-2;
+                    border-radius: 4px;
+                    margin-right: 20px;
+                    text-transform: uppercase;
+                    outline: none;
+                    &:hover{
+                        background-color: $color-yellow;
+                        transition: all .5s;
+                    }
+                }
+                .right{
+                    @include styleButton($color-black-2,$color-white-0,$color-black-2);
+                    padding: $pd-1 $pd-2;
+                    border-radius: 4px;
+                    text-transform: uppercase;
+                    outline: none;
+                    &:hover{
+                        background-color:$color-black-2;
+                        color: $color-white-0;
+                        transition: all .5s;
+                    }
+                }
+            }  
+        }
+    }      
+}

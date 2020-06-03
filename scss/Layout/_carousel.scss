@@ -1,0 +1,64 @@
+.carouselMassive{
+    .massive__carousel{
+        .carousel-item{
+            height: 760px;
+            .carousel-caption{
+                opacity: 0;
+                position: absolute;
+                top: 40%;
+                left: 12%;  
+                text-align: left;
+                text-transform: uppercase;
+                -webkit-transform: translateY(-80px);
+                        transform: translateY(-80px);
+            .top{
+                @include styleText($color-black-0, $fs-5, $fw-normal);
+            }
+            h5{
+                @include styleText($color-black-0, $fs-7 + 1, $fw-normal);
+                margin-bottom: $mg-2;
+            }
+            .bottom{
+                line-height: 30px;
+                text-transform: lowercase;
+                @include styleText($color-gray-1, $fs-0,$fw-normal);
+                }
+            }
+            .light{
+                color: $color-white-0!important;
+            }
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+        .active{
+            .carousel-caption{
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                        transform: translateY(0);
+                -webkit-transition: all .4s;
+                transition: all .4s;
+            }
+
+        }
+    }
+    #massiveCarousel{
+        .carousel-indicators{
+            position: absolute;
+            top: 92%;
+
+            li{
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                border: 1px solid $color-white-0;
+                background-color: transparent;
+            }
+            .active{
+                background-color: $color-white-0;
+            }
+
+        }
+    }
+}

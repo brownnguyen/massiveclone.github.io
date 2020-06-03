@@ -1,0 +1,62 @@
+.counter{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    height: 450px;
+    background-image: url(../img/7.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    .counter__content{
+        .counter__details{
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: center;
+                    justify-content: center;
+            position: relative;
+            .icon{
+                width: 20px;
+                color:$color-white-0;
+                font-size: $fs-7;
+                padding-right: $pd-4 - 20;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 1px;
+                    height: 100%;
+                    background-color: rgba(255,255,255,0.4);
+                    position: absolute;
+                    top: 0;
+                    left: 26%;
+                    -webkit-transform: rotate(30deg);
+                            transform: rotate(30deg);
+                }
+            }
+            .counter__right{
+                width: 200px;
+                .number{
+                    .countUp{
+                        @include styleText($color-white-0, $fs-7 + 1, $fw-normal);
+                    }
+                   
+                }
+                .text{
+                    @include styleText($color-white-0, $fs-0, $fw-normal);
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+        @include responsive('large'){
+            .counter__details{
+                -webkit-box-pack: start;
+                        justify-content: flex-start;
+                .icon{
+                    &::before{
+                        left: 10%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.create_work{
+    background-color: $color-black-2;
+    .create__content{
+        padding: $pd-3 + 10 0;
+        .content__left{
+            text-transform: uppercase;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+                    align-items: center;
+            p{
+                @include styleText($color-white-0,$fs-0, $fw-normal);
+
+            }
+            h3{ 
+                margin: 0;
+                @include styleText($color-white-0, $fs-6, $fw-normal);
+                span{
+                    color: $color-yellow;
+                }
+            }
+        }
+        .content__right{
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+                    align-items: center;
+            .btn{
+                box-shadow: none;
+                font-size: $fs-0 - 1;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                padding: $pd-1 $pd-2;
+                @include styleButton($color-white-0, rgba(255,255,255,0.2), rgba(255,255,255,0.2));
+                border: 1px solid transparent;
+                &:hover{
+                    background-color: $color-yellow;
+                }
+            }
+        }
+    }
+}

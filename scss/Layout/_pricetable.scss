@@ -1,0 +1,232 @@
+.price__table{
+    .price__top{
+        .top__content{
+            padding: 0;
+            a{
+                text-decoration: none;
+                .top__details{
+                    padding: $pd-4;
+                    height: 450px;
+                    display: -webkit-box;
+                    display: flex;
+                    -webkit-box-align: center;
+                            align-items: center;
+                    .top__text{
+                        span{
+                            @include styleText($color-white-0, $fs-0 + 1, $fw-normal);
+                            text-transform: uppercase;
+                        }
+                        h3{
+                            @include styleText($color-white-0, $fs-6, $fw-normal);
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            margin-bottom: $mg-2;
+                        }
+                        p{
+                            @include styleText($color-white-0, $fs-0, $fw-normal);
+                            line-height: 30px;
+                            margin-bottom: $mg-2;
+                        }
+                    }
+                }
+            }
+        }
+        .left, .right{
+            background-position: center;
+            background-size: cover;
+        }
+        .left{
+            background-image: url(../img/p10.jpg);
+        }
+        .right{
+            background-image: url(../img/03.jpg);
+        }
+    }
+    .price__table__main{
+        .main__title{
+            text-align: center;
+            h3{
+                @include styleText($color-black-0, $fs-6, $fw-normal);
+                text-transform: uppercase;
+                padding-top: $pd-4;
+            }
+            p{
+                @include styleText($color-gray-1, $fs-0, $fw-normal);
+                width: 50%;
+                margin: 0 auto;
+                padding-top: $pd-2;
+            }
+        }
+        .main__price{
+            padding-top: $pd-4;
+            .price__details{
+                text-align: center;
+                padding: 0 $pd-1 $pd-4;
+                .details__content{
+                    border: 1px solid $color-gray-11;
+                    padding: $pd-3;
+                    .option{
+                        h3{
+                            @include styleText($color-black-0, $fs-4, $fw-normal);
+                            text-transform: uppercase;
+                            padding-bottom: $pd-2;
+                            border-bottom: 1px solid $color-gray-11;
+                            letter-spacing: 2px;
+                        }
+                    }
+                    .price__text{
+                        padding: $pd-2 - 5 0;
+                        border-bottom: 1px solid $color-gray-11;
+                        margin-bottom: $mg-2 + 10;
+                        p{
+                            @include styleText($color-black-1, $fs-4,$fw-normal);
+                            margin: 0;
+                        }
+                        span{
+                            @include styleText($color-black-1, $fs-7 + 7, $fw-normal);
+                        }
+                        small{
+                            @include styleText($color-black-1,$fs-0 - 3, $fw-normal);
+                            text-transform: uppercase;
+                        }
+                    }
+                    .support{
+                        width: 60%;
+                        line-height: 40px;
+                        margin: 0 auto $mg-2 + 10;
+                        p{
+                            margin-bottom: 0;
+                            @include styleText($color-black-2, $fs-0, $fw-normal);
+                        }
+                    }
+                    .button__purchase{
+                        a{  
+                            display: block;
+                            text-decoration: none;
+                            padding: $pd-1 $pd-2 - 10;
+                            @include styleText($color-black-2, $fs-0, $fw-normal);
+                            text-transform: uppercase;
+                            border: 1px solid $color-gray-11;
+                            &:hover{
+                                @include styleButton($color-white-0, $color-black-2, $color-black-2);
+                                -webkit-transition: all .5s;
+                                transition: all .5s;
+                            }
+                        }
+                    }
+                }
+            }
+            .price__details.center{
+                .details__content{
+                    border: 1px solid $color-black-2;
+                    background-color: $color-black-2;
+                    .option{
+                        h3{
+                            color: $color-yellow;
+                        }
+
+                    }
+                    .price__text{
+                        p, span, small{
+                            color: $color-white-0;
+                        }
+                    }
+                    .support{
+                        p{
+                            color: $color-gray-12;
+                        }
+
+                    }
+                    .button__purchase{
+                        a{
+                            background-color: $color-white-0;
+                            &:hover{
+                                @include styleButton($color-white-0, $color-yellow, $color-yellow);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .getInTouch{
+        background-color: $color-gray-13;
+        padding: $pd-4 0;
+        .getInTouch__title{
+            margin-bottom: $mg-3;
+            h3{
+                @include styleText($color-yellow, $fs-6, $fw-normal);
+                text-transform: uppercase;
+            }
+            p{
+                @include styleText($color-gray-1, $fs-0, $fw-normal);
+                margin: $mg-1 - 5 0 $mg-1 + 5;
+            }
+        }
+        .getInTouch__subscribe{
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: center;
+                    justify-content: center;
+            margin: 0 auto;
+            width: 100%;
+            .subscribe__content{
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-pack: center;
+                        justify-content: center;
+                width: 60%;
+                .form-control.input__subscribe{
+                        width: 75%;
+                        height: 52px;
+                        padding: $pd-0;
+                        border-radius: 0;
+                        border: 1px solid transparent;
+                        box-shadow: none;
+                }
+                .btn__subscribe{
+                    @include styleButton($color-white-0, $color-black-2, transparent);
+                    font-size: $fs-0 - 1;
+                    padding: $pd-1 $pd-2;
+                    text-transform: uppercase;
+                    margin-left: $mg-1;
+                    box-shadow: none;
+                    &:hover{
+                        background-color: $color-yellow;
+                    }
+                }
+            }
+            @include responsive('large'){
+                .subscribe__content{
+                    width: 80%;
+                }
+            }
+            @include responsive('medium'){
+                .subscribe__content{
+                    width: 90%;
+                    .form-control.input__subscribe ,.btn__subscribe{
+                        display: inline-block;
+                        width: 100%;
+                        margin:0 0 $mg-1;
+                    }
+                }
+            }
+        }
+    }
+    .ourClients{
+        padding: $pd-4 0;
+        .clients__title{
+            padding-bottom: $pd-4;
+            text-align: center;
+            h3{
+                @include styleText($color-black-0, $fs-6,$fw-normal);
+                text-transform: uppercase;
+            }
+            p{
+                @include styleText($color-gray-1, $fs-0, $fw-normal);
+                padding-top: $pd-2;
+                margin: 0;
+            }
+        }
+    }
+}

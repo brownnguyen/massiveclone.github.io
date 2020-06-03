@@ -1,0 +1,93 @@
+.skills{
+    height: 600px;
+    background-image: url('../img/4.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    .layer{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.548)
+    }
+    .skill__content{
+        height: 100%;
+        .title{
+            letter-spacing: 6px;
+            margin: auto 0;
+            text-align: center;
+            @include styleText($color-white-0, $fs-6, $fw-normal);
+            text-transform: uppercase;
+        }
+        .content{
+            padding-left: $pd-3 + 10;
+            margin: auto 0;
+            .skills__text{
+                h4{
+                    margin-bottom: $mg-2;
+                    @include styleText($color-white-0, $fs-5, $fw-normal);
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+                p{  
+                    line-height: 30px;
+                    margin-bottom: $mg-2;
+                    @include styleText($color-white-0, $fs-0, $fw-normal);
+                }
+            }
+            .skills__progress{
+                padding-top: $pd-2;
+                .progress{
+                    margin: $mg-1 - 5 0 $mg-3;
+                    height: 20px;
+                    letter-spacing: 1px;
+                    border-radius: 0;
+                    background-color: $color-gray-6;
+                    overflow: visible;
+                    .progress-bar{
+                        text-align: left;
+                        position: relative;
+                        background-color: $color-white-0;
+                        @include styleText($color-black-0, $fs-1, $fw-normal);
+                        text-transform: uppercase;
+                        padding-left: $pd-0;
+                        opacity: 0;
+                        @-webkit-keyframes animate-positive{
+                            0% { width: 0%; }
+                        }
+                        @keyframes animate-positive{
+                            0% { width: 0%; }
+                        }
+                        span{
+                            @include styleText($color-black-0, $fs-1, $fw-normal);
+                            position: absolute;
+                            top: -28px;
+                            right: 10px;
+                            line-height: 20px;
+                            text-align: center;
+                            width: 35px;
+                            height: 20px;
+                            border-radius: 10px;
+                            background-color: $color-gray-7;
+                            &::before{
+                                display: block;
+                                content: '';
+                                width: 5px;
+                                height: 5px;
+                                -webkit-transform: rotate(45deg);
+                                        transform: rotate(45deg);
+                                background-color: $color-gray-7;
+                                position: absolute;
+                                bottom : -2px;
+                                left: 15px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
